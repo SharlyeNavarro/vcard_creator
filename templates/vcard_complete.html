@@ -1,0 +1,14 @@
+{% extends 'body.html' %}
+
+{% block content %}
+<h1>¡Gracias por crear tu VCard!</h1>
+<p>Tus datos han sido guardados en el archivo <code>contacto.vcf</code>.</p>
+<p>¡Aquí está tu código QR para descargar tus datos como contacto!</p>
+<div class="qr-container">
+<img src="{{ url_for('static', filename='img/qr_contacto.png') }}" alt="Código QR" width="300">
+<div class="qr-buttons">
+<a href="{{ url_for('static', filename='img/qr_contacto.png') }}" download="qr_contacto.png" class="btn btn-primary">Descargar QR</a>
+<a href="{{ url_for('static', filename='vcards/contacto.vcf') }}" download="contacto.vcf" class="btn btn-primary">Descargar VCard</a>
+</div>
+</div>
+{% endblock %}

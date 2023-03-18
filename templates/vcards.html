@@ -1,0 +1,40 @@
+{% extends 'body.html' %}
+
+{% block title %}Vcards{% endblock %}
+
+{% block content %}
+    <h1>Crea tu Vcard</h1>
+    <form method="POST" action="{{ url_for('vcards') }}">
+        <label for="nombre">Nombre:</label>
+        <input type="text" name="nombre" id="nombre" required><br><br>
+
+        <label for="correo">Correo:</label>
+        <input type="email" name="correo" id="correo" required><br><br>
+
+        <label for="celular">Celular:</label>
+        <input type="tel" name="celular" id="celular" required><br><br>
+
+        <label for="trabajo">Teléfono de trabajo:</label>
+        <input type="tel" name="trabajo" id="trabajo"><br><br>
+
+        <label for="casa">Teléfono de casa:</label>
+        <input type="tel" name="casa" id="casa"><br><br>
+
+        <label for="facebook">Facebook:</label>
+        <input type="url" name="facebook" id="facebook"><br><br>
+
+        <label for="twitter">Twitter:</label>
+        <input type="url" name="twitter" id="twitter"><br><br>
+
+        <label for="linkedin">LinkedIn:</label>
+        <input type="url" name="linkedin" id="linkedin"><br><br>
+
+        <label for="instagram">Instagram:</label>
+        <input type="url" name="instagram" id="instagram"><br><br>
+
+        <label for="youtube">YouTube:</label>
+        <input type="url" name="youtube" id="youtube"><br><br>
+
+        <input type="submit" value="Generar Vcard">
+    </form>
+{% endblock %}
