@@ -50,6 +50,11 @@ def qr():
     # Descargar el archivo PNG del código QR
     return send_from_directory('static/img', 'qr_contacto.png')
 
+
+@app.route('/prueba')
+def prueba():
+    return render_template('menulateral.html')
+
 if __name__ == '__main__':
     app.run(debug=True)
 

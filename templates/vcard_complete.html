@@ -1,14 +1,45 @@
 {% extends 'body.html' %}
 
 {% block content %}
-<h1>¡Gracias por crear tu VCard!</h1>
-<p>Tus datos han sido guardados en el archivo <code>contacto.vcf</code>.</p>
-<p>¡Aquí está tu código QR para descargar tus datos como contacto!</p>
-<div class="qr-container">
-<img src="{{ url_for('static', filename='img/qr_contacto.png') }}" alt="Código QR" width="300">
-<div class="qr-buttons">
-<a href="{{ url_for('static', filename='img/qr_contacto.png') }}" download="qr_contacto.png" class="btn btn-primary">Descargar QR</a>
-<a href="{{ url_for('static', filename='vcards/contacto.vcf') }}" download="contacto.vcf" class="btn btn-primary">Descargar VCard</a>
-</div>
+<div id="vcard-qr">
+    <div id="formulario_qr_vc" class="columna_principal">
+        <h1>Crea tu Vcard</h1>
+        <form method="POST" action="{{ url_for('vcards') }}">
+            <label for="nombre">Nombre:</label><br>
+            <input type="text" name="nombre" id="nombre" required><br><br>
+            
+            <label for="correo">Correo:</label><br>
+            <input type="email" name="correo" id="correo" required><br><br>
+            
+            <label for="celular">Celular:</label><br>
+            <input type="tel" name="celular" id="celular" required><br><br>
+            
+            <label for="trabajo">Teléfono de trabajo:</label><br>
+            <input type="tel" name="trabajo" id="trabajo"><br><br>
+            
+            <label for="casa">Teléfono de casa:</label><br>
+            <input type="tel" name="casa" id="casa"><br><br>
+            
+            <label for="facebook">Facebook:</label><br>
+            <input type="url" name="facebook" id="facebook"><br><br>
+            
+            <label for="twitter">Twitter:</label><br>
+            <input type="url" name="twitter" id="twitter"><br><br>
+            
+            <label for="linkedin">LinkedIn:</label><br>
+            <input type="url" name="linkedin" id="linkedin"><br><br>
+            
+            <label for="instagram">Instagram:</label><br>
+            <input type="url" name="instagram" id="instagram"><br><br>
+            
+            <label for="youtube">YouTube:</label><br>
+            <input type="url" name="youtube" id="youtube"><br><br>
+            
+            <input class="button" type="submit" value="Generar Vcard">
+        </form>
+    </div>
+    <div id="img_qr" class="columna_principal">
+        <iframe src="/static/html/img.html" width="400px" height="800px" frameborder="0"></iframe>
+    </div>
 </div>
 {% endblock %}

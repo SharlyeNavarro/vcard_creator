@@ -1,4 +1,4 @@
-#!/Users/josuenavarro/Vcards/vc_ve/bin/python3
+#!/Users/josuenavarro/Vcards/vc_ve/bin/python
 # -*- coding: utf-8 -*-
 import re
 import sys

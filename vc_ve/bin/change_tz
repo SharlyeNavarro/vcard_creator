@@ -1,4 +1,4 @@
-#!/Users/josuenavarro/Vcards/vc_ve/bin/python3
+#!/Users/josuenavarro/Vcards/vc_ve/bin/python
 # EASY-INSTALL-ENTRY-SCRIPT: 'vobject==0.9.6.1','console_scripts','change_tz'
 import re
 import sys

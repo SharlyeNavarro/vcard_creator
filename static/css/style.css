@@ -1,0 +1,142 @@
+@import url('https://fonts.googleapis.com/css2?family=Poppins:wght@100&display=swap');
+
+body{
+  font-family: 'Poppins', sans-serif;
+  align-items: center;
+}
+
+/*====================================
+Header
+====================================*/
+header {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding: 1rem;
+  background-color: #572364;
+}
+
+img {
+  max-width: 25%;
+}
+
+nav {
+  width: 600px;
+}
+
+ul {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  list-style: none;
+  padding: 0;
+  margin: 0;
+}
+
+li {
+  position: relative;
+  text-align: center;
+}
+
+.dropdown {
+  color: #ffffff;
+  background-color: transparent;
+  border: none;
+  cursor: pointer;
+  font-size: 1rem;
+}
+
+.dropdown:hover {
+  color: #444;
+}
+
+.dropdown-menu {
+  display: none;
+  position: absolute;
+  top: 100%;
+  left: 0;
+  z-index: 1;
+  padding: 0;
+  margin: 0;
+  list-style: none;
+  background-color: #fff;
+  box-shadow: 0 2px 4px rgba(0, 0, 0, 0.2);
+}
+
+.dropdown:hover + .dropdown-menu {
+  display: block;
+}
+
+.dropdown-menu li {
+  width: 100%;
+}
+
+.dropdown-menu li a {
+  display: block;
+  padding: 0.5rem;
+  text-decoration: none;
+  color: #444;
+}
+
+.dropdown-menu li a:hover {
+  background-color: #f2f2f2;
+}
+
+
+/*
+=========================
+PAGINA DE VCARDS
+=========================
+*/
+
+#vcard-qr {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: center;
+
+}
+
+#formulario_qr_vc {
+
+  width: 600px;
+  display: flex;
+  flex-direction: column;
+  border: 2px solid black ;
+  border-radius: 20px;
+  margin: 20px;
+}
+
+#formulario_qr_vc h1 {
+  /*margin:0px;
+  background-color: #572364;
+  border-top-right-radius: 20px ;
+  border-top-left-radius: 20px;
+  color: #ffffff;*/
+  display: block;
+  text-align: center;
+}
+
+#formulario_qr_vc form {
+  margin: 30px;
+}
+
+#formulario_qr_vc input {
+  
+  width: 100%;
+  height: 30px;
+  border-radius: 20px;
+}
+
+#formulario_qr_vc .button {
+  border: 30px;
+  background-color: #444;
+  color: #fff;
+  max-width: auto;
+}
+
+#img_qr {
+  display: block;
+  width: 420px;
+  height: auto;
+}
+

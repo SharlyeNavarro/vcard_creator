@@ -1,0 +1,149 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<title>Menú lateral</title>
+	<style>
+		/* Estilos para el menú */
+		.menu {
+			position: fixed;
+			left: 0;
+			top: 0;
+			bottom: 0;
+			width: 60px;
+			background-color: #333;
+			color: #fff;
+			display: flex;
+			flex-direction: column;
+			align-items: left;
+			justify-content: space-between;
+			padding: 10px 0;
+			z-index: 999;
+			list-style: none;
+		}
+
+		.menu:hover {
+			width: 250px;
+			transition: all 0.3s;
+		}
+
+		.menu .ul_menu {
+			margin: 40;
+			padding: 0;
+			display: inline;
+			flex-direction: column;
+			align-items: center;
+			justify-content: center;
+		}
+
+		.menu .li_menu {
+			margin: 20px 0;
+			display: flex;
+			align-items: center;
+			justify-content: center;
+			transition: all 0.3s ease-in-out;
+			border: solid 1px #fff;
+		}
+
+		.menu .li_menu:hover {
+			color: #fff;
+			cursor: pointer;
+			transform: scale(1.1);
+		}
+		.li_menu img{
+			margin: 15px;
+		}
+		.li_menu p{
+			display: flexbox;
+		}
+		.li_menu ul{
+			background-color: #333;
+			list-style: none;
+			border: solid 1px #fff;
+		}
+
+		
+		/* Estilos para el menú desplegado */
+		.menu:hover .ul_menu {
+			display: flex;
+			flex-direction: column;
+			align-items: flex-start;
+			justify-content: flex-start;
+			padding: 0 10px;
+		}
+
+		.menu .li_menu:hover ul {
+			display: flex;
+			flex-direction: column;
+			align-items: flex-start;
+			justify-content: flex-start;
+			margin-left: 50px;
+			padding: 0;
+		}
+
+		/*===Mi propia configuración===*/
+		#logo{
+			max-width: 50px;
+		}
+		
+
+		.li_menu p {
+			display: none;
+			align-items: center;
+		}
+		.li_menu ul {
+			display: none;
+		}
+
+		.menu img {
+			max-width: 50px;
+		}
+		.menu:hover .ul_menu p{
+			display: flex;
+		}
+		.ul_menu .br{
+			height: 2px;
+			display: inline;
+			color: #fff;
+		}
+		.li_menu ul li:hover{
+			transform: scale(1.1);
+		}
+	</style>
+</head>
+<body>
+	<div class="menu">
+		<ul class="ul_menu">
+			<a id="logo" href="#"><img src="https://cdn-icons-png.flaticon.com/128/1685/1685648.png" alt=""></a>
+			<li class="li_menu">
+				<img src="https://cdn-icons-png.flaticon.com/128/825/825569.png" alt="">
+				<p>QR</p>
+				<ul>
+					<li>Menu 1</li>
+					<li>Menu 2</li>
+					<li>Menu 3</li>
+				</ul>
+			</li>
+			<br class="br">
+			<li class="li_menu">
+				<img src="https://cdn-icons-png.flaticon.com/128/2058/2058834.png" alt="">
+                <p>Vcard</p>
+				<ul>
+					<li>Menu 4</li>
+					<li>Menu 5</li>
+					<li>Menu 6</li>
+				</ul>
+			</li>
+			<br class="br">
+			<li class="li_menu">
+				<img src="https://cdn-icons-png.flaticon.com/128/3025/3025546.png" alt="">
+                <p>WhatsApp</p>
+				<ul>
+					<li>Menu 7</li>
+					<li>Menu 8</li>
+					<li>Menu 9</li>
+				</ul>
+			</li>
+		</ul>
+	</div>
+</body>
+</html>
