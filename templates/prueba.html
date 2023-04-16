@@ -1,0 +1,101 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<title>Flask App</title>
+	<style>
+		/* Estilos para el encabezado */
+		.header {
+			display: flex;
+			justify-content: space-between;
+			align-items: center;
+			padding: 20px;
+			background-color: #333;
+			color: #fff;
+		}
+
+		.logo {
+			font-size: 30px;
+			font-weight: bold;
+			text-transform: uppercase;
+			letter-spacing: 2px;
+		}
+
+		/* Estilos para los botones desplegables */
+		.dropdown {
+			position: relative;
+			display: inline-block;
+		}
+
+		.dropdown-content {
+			display: none;
+			position: absolute;
+			z-index: 1;
+			background-color: #f1f1f1;
+			min-width: 160px;
+			box-shadow: 0px 8px 16px 0px rgba(0,0,0,0.2);
+			padding: 12px 16px;
+			border-radius: 5px;
+		}
+
+		.dropdown:hover .dropdown-content {
+			display: block;
+		}
+
+		.dropdown-item {
+			display: block;
+			padding: 5px 0;
+			color: #333;
+			text-decoration: none;
+			transition: all 0.3s;
+		}
+
+		.dropdown-item:hover {
+			background-color: #ddd;
+		}
+	</style>
+</head>
+<body>
+	<!-- Encabezado con logo y botones desplegables -->
+	<header class="header">
+		<div class="logo">Flask App</div>
+		<div>
+			<div class="dropdown">
+				<button class="dropdown-item">Botón 1</button>
+				<ul class="dropdown-content">
+					<li><a href="#">Opción 1</a></li>
+					<li><a href="#">Opción 2</a></li>
+					<li><a href="#">Opción 3</a></li>
+				</ul>
+			</div>
+			<div class="dropdown">
+				<button class="dropdown-item">Botón 2</button>
+				<ul class="dropdown-content">
+					<li><a href="#">Opción 1</a></li>
+					<li><a href="#">Opción 2</a></li>
+					<li><a href="#">Opción 3</a></li>
+				</ul>
+			</div>
+			<div class="dropdown">
+				<button class="dropdown-item">Botón 3</button>
+				<ul class="dropdown-content">
+					<li><a href="#">Opción 1</a></li>
+					<li><a href="#">Opción 2</a></li>
+					<li><a href="#">Opción 3</a></li>
+				</ul>
+			</div>
+		</div>
+	</header>
+	
+	<!-- Contenido principal de la página -->
+	<main>
+		<h1>¡Hola, mundo!</h1>
+		<p>Bienvenido a mi aplicación Flask.</p>
+        {% block content %}
+    
+        {% endblock %}
+
+        {% block scripts %}
+        {% endblock %}
+	</main>
+</body>
+</html>

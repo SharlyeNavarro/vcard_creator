@@ -1,0 +1,54 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <link rel="stylesheet" type="text/css" href="{{ url_for('static', filename='css/style.css') }}">
+    <title>{% block title %} Inicio - SHB {% endblock %}</title>
+    {% block styles %}
+        <link rel="stylesheet" href="{{ url_for('static', filename='main.css') }}">
+    {% endblock %}
+</head>
+<body>
+    <header>
+        <a href="#">
+          <img src="ruta/a/tu/icono.png" alt="Icono">
+        </a>
+        <nav>
+          <ul>
+            <li>
+              <button class="dropdown">QR</button>
+              <ul class="dropdown-menu">
+                <li><a href="/vcards">Generar</a></li>
+                <li><a href="#">Generados</a></li>
+                <li><a href="#">Opción 3</a></li>
+              </ul>
+            </li>
+            <li>
+              <button class="dropdown">QR - Vcard</button>
+              <ul class="dropdown-menu">
+                <li><a href="#">Generar</a></li>
+                <li><a href="#">Generado</a></li>
+                <li><a href="#">Opción 3</a></li>
+              </ul>
+            </li>
+            <li>
+              <button class="dropdown">WhatsApp</button>
+              <ul class="dropdown-menu">
+                <li><a href="#">Generar Link</a></li>
+                <li><a href="#">Generar QR</a></li>
+                <li><a href="#">Generado</a></li>
+              </ul>
+            </li>
+          </ul>
+        </nav>
+      </header>
+      
+
+    {% block content %}
+    
+    {% endblock %}
+
+    {% block scripts %}
+    {% endblock %}
+</body>
+</html>
